@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.io.*;
+class Main {
+   void getUn(int n)
+    {
+         
+        int no1=0,no2=0,r,r1,count=0;
+        no1=n;
+        no2=n;
+        while(no1>0)
+        { 
+          r=no1%10;
+             System.out.println("\n number 2  : "+no2);
+              while(no2 > 0)
+              {
+               r1=no2%10;
+               if(r==r1)
+               {
+                   count++;
+               }
+               no2=no2/10;
+              }
+          no1=no1/10;
+          no2=n;
+        }
+        if(count==1)
+          {
+              System.out.println("number is  a unique number");
+          }
+          else
+          {
+              System.out.println("number is not a unique number");
+          }
+    }
+    public static void main(String[] args) 
+    {
+        Main obj= new Main();
+        System.out.println("enter a number  : ");
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+      obj.getUn(n);
+    }
+}
